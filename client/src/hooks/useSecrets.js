@@ -26,7 +26,7 @@ const useSecrets = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_BASE_URL}api/v1/secrete/all-secrete`
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/secrete/all-secrete`
         );
         setSecrets(response.data.secret);
       } catch (error) {
