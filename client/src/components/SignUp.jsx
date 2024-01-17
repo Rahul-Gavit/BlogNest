@@ -18,7 +18,7 @@ import Spinner from "./Spinner";
 
 const defaultTheme = createTheme();
 
-const API_ENDPOINT = `${import.meta.env.VITE_API_BASE_URL}/api/v1/user/signup`;
+const API_ENDPOINT = `${import.meta.env.VITE_API_BASE_URL}api/v1/user/signup`;
 
 export default function SignUp() {
   const navigate = useNavigate();

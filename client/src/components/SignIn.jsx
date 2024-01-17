@@ -16,7 +16,7 @@ import toast from "react-hot-toast";
 import Spinner from "./Spinner"; // Import your Spinner component
 
 const defaultTheme = createTheme();
-const API_ENDPOINT = `${import.meta.env.VITE_API_BASE_URL}/api/v1/user/login`;
+const API_ENDPOINT = `${import.meta.env.VITE_API_BASE_URL}api/v1/user/login`;
 
 export default function SignIn() {
   const navigate = useNavigate();

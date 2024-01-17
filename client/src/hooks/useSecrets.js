@@ -26,7 +26,7 @@ const useSecrets = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_BASE_URL}/api/v1/secrete/all-secrete`
+          `${import.meta.env.VITE_API_BASE_URL}api/v1/secrete/all-secrete`
         );
         setSecrets(response.data.secret);
       } catch (error) {
@@ -44,7 +44,7 @@ const useSecrets = () => {
       const token = localStorage.getItem("jwtToken");
 
       const response = await axios.post(
-        `${import.meta.env.VITE_API_BASE_URL}/api/v1/secrete/create-secrete`,
+        `${import.meta.env.VITE_API_BASE_URL}api/v1/secrete/create-secrete`,
         { content: inputValue },
         {
           headers: {
@@ -76,7 +76,7 @@ const useSecrets = () => {
       const response = await axios.delete(
         `${
           import.meta.env.VITE_API_BASE_URL
-        }/api/v1/secrete/delete-secrete/${secretId}`,
+        }api/v1/secrete/delete-secrete/${secretId}`,
         {
           headers: {
             Authorization: `${token}`,
@@ -105,7 +105,7 @@ const useSecrets = () => {
       const response = await axios.put(
         `${
           import.meta.env.VITE_API_BASE_URL
-        }/api/v1/secrete/update-secrete/${secretId}`,
+        }api/v1/secrete/update-secrete/${secretId}`,
         { content: updatedContent },
         {
           headers: {
