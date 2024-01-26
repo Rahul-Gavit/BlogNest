@@ -20,11 +20,11 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  secretes: {
+  blogs: {
     type: [
       {
         type: mongoose.Types.ObjectId,
-        ref: "Secrete",
+        ref: "Blog",
       },
     ],
     default: [],

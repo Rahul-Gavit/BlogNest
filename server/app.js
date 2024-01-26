@@ -13,7 +13,7 @@ connectDB();
 
 //router import
 const userRoutes = require("./routes/userRoutes");
-const secreteRoute = require("./routes/secreteRoutes");
+const blogRoute = require("./routes/blogRoutes");
 
 //middlewares
 app.use(cors());
@@ -21,7 +21,7 @@ app.use(express.json());
 // routes
 
 app.use("/api/v1/user", userRoutes);
-app.use("/api/v1/secrete", secreteRoute);
+app.use("/api/v1/blog", blogRoute);
 
 app.listen(port, () => {
   console.log(`server connected to port ${port}`);

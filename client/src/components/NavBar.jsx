@@ -7,11 +7,11 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
-import useSecrets from "../hooks/useSecrets";
+import useBlogPost from "../hooks/useBlogPost";
 
 export default function NavBar() {
   const navigate = useNavigate();
-  const { isLoggedIn, logout } = useSecrets();
+  const { isLoggedIn, logout } = useBlogPost();
 
   const handleLogout = () => {
     logout();
@@ -32,7 +32,7 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Secrete Post
+            BlogNest
           </Typography>
 
           {isLoggedIn ? (

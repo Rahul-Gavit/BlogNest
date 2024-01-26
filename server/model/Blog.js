@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const secretSchema = new Schema({
+const blogSchema = new Schema({
   user_id: {
     type: mongoose.Types.ObjectId,
     ref: "User",
+    required: true,
+  },
+  title: {
+    type: String,
     required: true,
   },
   content: {
@@ -17,6 +21,6 @@ const secretSchema = new Schema({
   },
 });
 
-const Secrete = mongoose.model("Secrete", secretSchema);
+const Blog = mongoose.model("Blog", blogSchema);
 
-module.exports = Secrete;
+module.exports = Blog;

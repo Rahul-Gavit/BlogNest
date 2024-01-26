@@ -1,14 +1,12 @@
 import React from "react";
-import SignUp from "../components/SignUp";
-import SignIn from "../components/SignIn";
-import SecretePost from "../components/SecretePost";
 import NavBar from "../components/NavBar";
+import BlogPostPost from "../components/BlogPost";
 
 const Home = () => {
   return (
     <div>
       <NavBar />
-      <SecretePost />
+      <BlogPostPost />
     </div>
   );
 };
